@@ -6,7 +6,7 @@ public class Student {
     }
 
     public void accordion() {
-        System.out.println("Петя играет на баяне");
+         System.out.println("Петя играет на баяне");
     }
 
     public static void main(String[] args) {
