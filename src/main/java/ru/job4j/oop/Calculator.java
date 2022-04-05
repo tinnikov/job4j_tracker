@@ -11,7 +11,7 @@ public class Calculator {
         return x * a;
     }
 
-    public int minus (int a) {
+    public int minus(int a) {
         return a - x;
     }
 
