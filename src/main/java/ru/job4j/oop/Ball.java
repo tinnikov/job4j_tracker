@@ -2,10 +2,9 @@ package ru.job4j.oop;
 
 public class Ball {
     public static void tryRun(Boolean condition) {
-        if (condition == true) {
+        if (condition) {
             System.out.println("Колобок съеден");
-        }
-        else {
+        } else {
             System.out.println("Колобок сбежал");
         }
     }
