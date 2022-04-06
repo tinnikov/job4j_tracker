@@ -1,7 +1,7 @@
 package ru.job4j.oop;
 
 public class Ball {
-    public static void tryRun(Boolean condition) {
+    public void tryRun(Boolean condition) {
         if (condition) {
             System.out.println("Колобок съеден");
         } else {
