@@ -24,15 +24,12 @@ public class Calculator {
     }
 
     public static void main(String[] args) {
+        Calculator calc = new Calculator();
         int result = sum(10);
         System.out.println(result);
-        Calculator multiply = new Calculator();
-        System.out.println(multiply.multiply(5));
-        Calculator min = new Calculator();
-        System.out.println(min.minus(10));
-        Calculator div = new Calculator();
-        System.out.println(div.divide(100));
-        Calculator summa = new Calculator();
-        System.out.println(summa.sumAllOperation(12));
+        System.out.println(calc.multiply(5));
+        System.out.println(calc.minus(10));
+        System.out.println(calc.divide(100));
+        System.out.println(calc.sumAllOperation(12));
     }
 }
