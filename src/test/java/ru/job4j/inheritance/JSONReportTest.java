@@ -8,8 +8,8 @@ public class JSONReportTest {
 
     @Test
     public void whenTestGenerateMethod() {
-        String ln = System.lineSeparator();
-        String expected = "{" + ln
+         String ln = System.lineSeparator();
+         String expected = "{" + ln
                 + "\t\"name\" : \"Report's name\"," + ln
                 + "\t\"body\" : \"Report's body\"" + ln
                 + "}";
