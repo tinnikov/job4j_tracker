@@ -6,7 +6,7 @@ public class Profession {
     private String education;
     private String birthday;
 
-    public Profession (String name, String surname, String education, String birthday) {
+    public Profession(String name, String surname, String education, String birthday) {
         this.name = name;
         this.surname = surname;
         this.education = education;
@@ -39,6 +39,4 @@ public class Profession {
         Profession java = new Programmer(prof.getName(), prof.getSurname(), prof.getEducation(), prof.getBirthday(), engin.getSpeciality(), "программист Java");
         java.printInfo();
     }
-
-
 }

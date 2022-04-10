@@ -1,6 +1,6 @@
 package ru.job4j.inheritance;
 
-public class Dentist extends Doctor{
+public class Dentist extends Doctor {
 
     private String teeth;
 
@@ -12,7 +12,6 @@ public class Dentist extends Doctor{
     public String getTeeth() {
         return teeth;
     }
-
 
     public void printInfo() {
         super.printInfo();
