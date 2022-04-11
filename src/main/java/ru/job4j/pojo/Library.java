@@ -1,5 +1,7 @@
 package ru.job4j.pojo;
 
+import java.util.Objects;
+
 public class Library {
     public static void main(String[] args) {
         Book book1 = new Book("Clean code", 15);
@@ -25,9 +27,9 @@ public class Library {
         for (Book out : array) {
             System.out.println(out.getName() + " - " + out.getCount());
         }
-
-        for (Book out : array) {
-            if (out.getName() == "Clean code") {
+          for (Book out : array) {
+            if (out.getName() !=null) {
+                out.getName().equals("Clean Code");
                 System.out.println(out.getName());
             }
         }
