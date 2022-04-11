@@ -28,7 +28,7 @@ public class Library {
             System.out.println(out.getName() + " - " + out.getCount());
         }
           for (Book out : array) {
-            if (out.getName() !=null) {
+            if (out.getName() != null) {
                 out.getName().equals("Clean Code");
                 System.out.println(out.getName());
             }
