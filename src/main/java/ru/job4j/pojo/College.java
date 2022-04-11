@@ -9,6 +9,7 @@ public class College {
         student.setFio("Тинников Константин Рафаилович");
         student.setGroup("Бакалавр");
         student.setDate(new Date(98, 06, 05));
-        System.out.println("ФИО: " + student.getFio() + System.lineSeparator() + "Группа: " + student.getGroup() + System.lineSeparator() + "Дата поступления: " + student.getDate());
+        System.out.println("ФИО: " + student.getFio() + System.lineSeparator() + "Группа: " + student.getGroup()
+                            + System.lineSeparator() + "Дата поступления: " + student.getDate());
     }
 }
