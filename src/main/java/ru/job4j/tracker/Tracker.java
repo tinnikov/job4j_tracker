@@ -36,7 +36,6 @@ public class Tracker {
                 rsl[value] = name;
                 value++;
             }
-
         }
         rsl = Arrays.copyOf(rsl, value);
         return rsl;
@@ -56,5 +55,4 @@ public class Tracker {
         rsl = Arrays.copyOf(rsl, value);
         return rsl;
     }
-
 }
