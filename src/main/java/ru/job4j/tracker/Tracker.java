@@ -34,7 +34,8 @@ public class Tracker {
         if (index > -1) {
             items[index].setName(item.getName());
             return true;
-        } else { return false;
+        } else {
+            return false;
                }
         }
 
