@@ -35,7 +35,6 @@ public class Tracker {
          boolean rsl = index != -1;
          if (rsl) {
              items[index] = item;
-
          }
          return rsl;
         }
