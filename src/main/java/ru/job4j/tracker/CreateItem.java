@@ -8,7 +8,7 @@ public class CreateItem implements UserAction {
     }
 
     @Override
-    public String name() {
+        public String name() {
         return "Add new Item";
     }
 
@@ -21,5 +21,4 @@ public class CreateItem implements UserAction {
         out.println("Добавленная заявка: " + item);
         return true;
     }
-
 }

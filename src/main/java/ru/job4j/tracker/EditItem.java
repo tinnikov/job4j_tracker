@@ -6,6 +6,7 @@ public class EditItem implements UserAction {
     public EditItem(Output out) {
         this.out = out;
     }
+
     @Override
     public String name() {
         return "Edit item";
