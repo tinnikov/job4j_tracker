@@ -14,7 +14,8 @@ public class EditItem implements UserAction {
         Item item = new Item(name);
         if (tracker.replace(id, item)) {
             System.out.println("Заявка изменена успешно.");
-        }
+        } else System.out.println("Замена элемента не удалась");
+
         return true;
     }
 }
