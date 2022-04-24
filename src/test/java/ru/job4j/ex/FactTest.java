@@ -8,7 +8,6 @@ import static org.junit.Assert.fail;
 
 
 public class FactTest {
-
     @Test(expected = IllegalArgumentException.class)
     public void whenNnegative() {
         new Fact().calc(-1);
