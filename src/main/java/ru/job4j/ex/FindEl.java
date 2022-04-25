@@ -15,10 +15,12 @@ public class FindEl {
     }
 
     public static void main(String[] args) {
+
         try {
         String[] test = new String[] {"Moscow", "Krasnodar", "Abakan"};
-        System.out.println(indexOf(test, "Krasnodar"));
+        System.out.println(indexOf(test,"Krasnodar"));
         }
+
         catch (ElementNotFoundException e) {
             e.printStackTrace();
         }
