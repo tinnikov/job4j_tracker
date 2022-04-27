@@ -5,43 +5,38 @@ public class UserStore {
     public static User findUser(User[] users, String login) throws UserNotFoundException {
         int index = 0;
         User user = null;
-        for (int i = 0; i < users.length; i++) {
-        if (users[i].getUsername().equals(login)) {
-                user = users[i];
-            break;
+        for (User value : users) {
+            if (value.getUsername().equals(login)) {
+                user = value;
+                break;
+            }
         }
-      }
-        if (users[index].getUsername() != login) {
+        if (user == null) {
             throw new UserNotFoundException("Пользователь не найден");
         }
         return user;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        boolean rsl = false;
-        int symbol = user.getUsername().length();
-        if (user.isValid() && symbol > 3) {
-            rsl = true;
-        } else {
+        if (!user.isValid() || user.getUsername().length() < 3) {
             throw new UserInvalidException("Пользователь не валидный");
         }
-
-        return rsl;
+        return true;
     }
 
-    public static void main(String[] args) throws UserNotFoundException {
-        User[] users = {
-                new User("Petr Arsentev", true)
-        };
+    public static void main(String[] args) {
         try {
+            User[] users = {
+                    new User("Petr Arsentev", true)
+            };
             User user = findUser(users, "Petr Arsentev");
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
         } catch (UserInvalidException e) {
             e.printStackTrace();
-        } catch (UserNotFoundException el) {
-            el.printStackTrace();
+        } catch (UserNotFoundException e) {
+            e.printStackTrace();
         }
     }
 }
