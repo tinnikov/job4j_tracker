@@ -91,7 +91,6 @@ public class StartUITest {
 
     @Test
     public void whenFindByIDTestOutputIsSuccessfully() {
-
         Output out = new StubOutput();
         Tracker tracker = new Tracker();
         Item one = tracker.add(new Item("test1"));
