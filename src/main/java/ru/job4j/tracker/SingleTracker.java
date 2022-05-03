@@ -2,8 +2,10 @@ package ru.job4j.tracker;
 
 public class SingleTracker {
     private static SingleTracker instance = null;
+
     private SingleTracker() {
     }
+
     public static SingleTracker getInstance() {
         if (instance == null) {
             instance = new SingleTracker();
@@ -36,6 +38,4 @@ public class SingleTracker {
         public boolean delete(int id) {
             return tracker.delete(id);
         }
-
-
 }
