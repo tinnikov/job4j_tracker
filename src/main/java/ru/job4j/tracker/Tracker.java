@@ -12,7 +12,6 @@ public class Tracker {
         items.add(item);
         return item;
     }
-
     private int indexOf(int id) {
         int rsl = -1;
         for (int index = 0; index < items.size(); index++) {
