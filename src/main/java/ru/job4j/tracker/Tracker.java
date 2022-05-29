@@ -46,11 +46,9 @@ public class Tracker {
 
     public List<Item> findByName(String key) {
         List<Item> rsl = new ArrayList<>();
-        int value = 0;
-        for (Item name : items) {
+          for (Item name : items) {
             if (key.equals(name.getName())) {
-                rsl.add(value, name);
-                value++;
+                rsl.add(name);
             }
         }
         rsl = List.copyOf(rsl);
