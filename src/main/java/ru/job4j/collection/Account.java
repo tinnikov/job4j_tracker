@@ -29,13 +29,13 @@ public class Account {
     public int hashCode() {
         return Objects.hash(passport);
     }
-    @Override
 
+    @Override
     public String toString() {
-        return "Account{" +
-                "passport='" + passport + '\'' +
-                ", username='" + username + '\'' +
-                ", deposit='" + deposit + '\'' +
-                '}';
+        return "Account{"
+                + "passport='" + passport + '\''
+                + ", username='" + username + '\''
+                + ", deposit='" + deposit + '\''
+                + '}';
     }
 }
