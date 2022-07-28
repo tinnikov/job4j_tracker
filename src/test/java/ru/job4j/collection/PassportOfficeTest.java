@@ -1,8 +1,5 @@
 package ru.job4j.collection;
-
-import org.hamcrest.Matcher;
 import org.junit.Test;
-
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.*;
 
@@ -23,6 +20,5 @@ public class PassportOfficeTest {
         PassportOffice office = new PassportOffice();
         office.add(citizen);
         assertFalse(office.add(citizen1));
-
         }
 }
