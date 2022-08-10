@@ -14,6 +14,7 @@ public class AnalyzeByMap {
         }
         return sum / count;
     }
+
     public static List<Label> averageScoreByPupil(List<Pupil> pupils) {
         List<Label> list = new ArrayList<>();
         for (Pupil pupil : pupils) {
@@ -27,6 +28,7 @@ public class AnalyzeByMap {
         System.out.println(list);
         return list;
     }
+
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
         List<Label> list = new ArrayList<>();
         Map<String, Integer> map = new LinkedHashMap<>();
@@ -59,7 +61,7 @@ public class AnalyzeByMap {
         List<Label> list = new ArrayList<>();
         Map<String, Integer> map = new LinkedHashMap<>();
         for (Pupil pupil : pupils) {
-            for(Subject subject : pupil.subjects()) {
+            for (Subject subject : pupil.subjects()) {
                 map.putIfAbsent(subject.name(), 0);
                 map.put(subject.name(), map.get(subject.name()) + subject.score());
             }
