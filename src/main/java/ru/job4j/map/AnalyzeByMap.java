@@ -25,18 +25,7 @@ public class AnalyzeByMap {
             double avg = sum / pupil.subjects().size();
             list.add(new Label(pupil.name(), avg));
         }
-        System.out.println(list);
         return list;
-    }
-    private static Map<String, Integer> putMap(List<Pupil> pupils) {
-        Map<String, Integer> map = new LinkedHashMap<>();
-        for (Pupil pupil : pupils) {
-            for (Subject subject : pupil.subjects()) {
-                map.putIfAbsent(subject.name(), 0);
-                map.put(subject.name(), map.get(subject.name()) + subject.score());
-            }
-        }
-        return map;
     }
 
     public static List<Label> averageScoreBySubject(List<Pupil> pupils) {
@@ -63,6 +52,15 @@ public class AnalyzeByMap {
 
     public static Label bestSubject(List<Pupil> pupils) {
         List<Label> list = new ArrayList<>();
+        Map<String, Integer> map = putMap(pupils);
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+                list.add(new Label(entry.getKey(), entry.getValue()));
+        }
+        list.sort(Comparator.naturalOrder());
+        return list.get(list.size() - 1);
+    }
+
+    private static Map<String, Integer> putMap(List<Pupil> pupils) {
         Map<String, Integer> map = new LinkedHashMap<>();
         for (Pupil pupil : pupils) {
             for (Subject subject : pupil.subjects()) {
@@ -70,10 +68,6 @@ public class AnalyzeByMap {
                 map.put(subject.name(), map.get(subject.name()) + subject.score());
             }
         }
-        for (Map.Entry<String, Integer> entry : map.entrySet()) {
-                list.add(new Label(entry.getKey(), entry.getValue()));
-        }
-        list.sort(Comparator.naturalOrder());
-        return list.get(list.size() - 1);
+        return map;
     }
 }
