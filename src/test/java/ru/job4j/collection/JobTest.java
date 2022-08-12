@@ -20,7 +20,7 @@ public class JobTest {
         Comparator<Job> cmpNamePriority = new JobDescByPriority().thenComparing(new JobDescByName());
         int rsl = cmpNamePriority.compare(
                 new Job("Impl task", 0),
-                new Job("Fix bug", 1)
+                new Job("Fix bug", 0)
         );
         assertThat(rsl).isLessThan(0);
     }
