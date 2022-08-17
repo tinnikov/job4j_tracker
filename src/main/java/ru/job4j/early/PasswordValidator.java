@@ -20,6 +20,7 @@ public class PasswordValidator {
         if (password.length() < 8 || password.length() > 32) {
             throw new IllegalArgumentException("Пароль должен быть в диапазоне от 8 до 32 символов");
         }
+
         for (int i = 0; i < password.length(); i++) {
 
             if (Character.isUpperCase(password.charAt(i))) {
