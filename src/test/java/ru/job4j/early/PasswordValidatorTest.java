@@ -15,7 +15,7 @@ class PasswordValidatorTest {
 
     @Test
     public void whenPassIsNull() {
-        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, ()-> {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             PasswordValidator.validate(null);
         });
         Assertions.assertEquals("Пароль не может быть null", thrown.getMessage());
@@ -23,7 +23,7 @@ class PasswordValidatorTest {
 
     @Test
     public void whenPassIsDiapozon() {
-        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, ()-> {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             PasswordValidator.validate("Passwor");
         });
         Assertions.assertEquals("Пароль должен быть в диапазоне от 8 до 32 символов", thrown.getMessage());
@@ -31,7 +31,7 @@ class PasswordValidatorTest {
 
     @Test
     public void whenPassIsOneUpperLetter() {
-        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, ()-> {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             PasswordValidator.validate("password1");
         });
         Assertions.assertEquals("Пароль должен содержать хоть одну заглавную букву", thrown.getMessage());
@@ -39,7 +39,7 @@ class PasswordValidatorTest {
 
     @Test
     public void whenPassIsOneLowLetter() {
-        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, ()-> {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             PasswordValidator.validate("PASSWORD1");
         });
         Assertions.assertEquals("Пароль должен содержать хоть одну строчную букву", thrown.getMessage());
@@ -47,7 +47,7 @@ class PasswordValidatorTest {
 
     @Test
     public void whenPassIsOneDigit() {
-        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, ()-> {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             PasswordValidator.validate("Password");
         });
         Assertions.assertEquals("Пароль должен содержать хотя бы одну цифру", thrown.getMessage());
@@ -55,7 +55,7 @@ class PasswordValidatorTest {
 
     @Test
     public void whenPassIsOneSpecSymb() {
-        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, ()-> {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             PasswordValidator.validate("Password1");
         });
         Assertions.assertEquals("Пароль должен содержать один спецсимвол", thrown.getMessage());
@@ -63,7 +63,7 @@ class PasswordValidatorTest {
 
     @Test
     public void whenPassIsNoSubstring() {
-        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, ()-> {
+        IllegalArgumentException thrown = assertThrows(IllegalArgumentException.class, () -> {
             PasswordValidator.validate("password123P?");
         });
         Assertions.assertEquals("Пароль не должен содержать подстроки в любых регистрах: qwerty, 12345, password, admin, user", thrown.getMessage());
